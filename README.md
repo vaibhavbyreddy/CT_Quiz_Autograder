@@ -1,12 +1,12 @@
 # AI Quiz Autograder (Google Forms + Gemini)
 
-This tool automates the grading of open-ended/complex Google Form quizzes using Google's Gemini 1.5 Flash API. It compares student responses to a hidden "Model Answer," generates a score and detailed feedback based on a rubric, and emails the results to the student and the instructor instantly.
+This tool automates the grading of open-ended/complex Google Form quizzes using Google's Gemini 3 Flash API. It compares student responses to a hidden "Model Answer," generates a score and detailed feedback based on a rubric, and emails the results to the student and the instructor instantly.
 
 It runs entirely within **Google Apps Script**, meaning there are no servers to set up or pay for.
 
 ## Features
 - **Zero-Infrastructure:** Runs inside your Google Form.
-- **Cheap/Free:** Uses `gemini-1.5-flash` (free tier allows ~1,500 requests/day).
+- **Cheap/Free:** Uses `gemini-3-flash` (free tier allows ~100 requests/day).
 - **Instant Feedback:** Students receive an email with their score and specific feedback seconds after submitting.
 - **Non-Technical Friendly:** The Model Answer and Admin Email are stored in a Google Sheet, not in the code.
 
@@ -26,12 +26,9 @@ It runs entirely within **Google Apps Script**, meaning there are no servers to 
 2. Create a new tab (at the bottom) and rename it exactly: `Settings` (Case sensitive).
 3. In this new tab, fill in the following cells:
 
-| Cell | Content |
-| :--- | :--- |
-| **A2** | `Model Answer` |
-| **B2** | *[Paste your Model Answer text here]* |
-| **A3** | `Admin Email` |
-| **B3** | *[Paste your email address here to get copies of grades]* |
+
+| `Model Answer` | *[Paste your Model Answer text here]* |
+| `Admin Email` | *[Paste your email address here to get copies of grades]* |
 
 4. **Copy the full URL** of this Google Sheet from your browser address bar.
 
