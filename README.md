@@ -31,6 +31,9 @@ It runs entirely within **Google Apps Script**, meaning there are no servers to 
 
 | `Admin Email` | *[Paste your email address here to get copies of grades]* |
 
+Your Settings spreadsheet should look like this example.
+https://docs.google.com/spreadsheets/d/186CQLKABzjRel4WW15-A3GFu0zVdn0sqPvq54PdaKMM/edit?usp=sharing
+
 4. **Copy the full URL** of this Google Sheet from your browser address bar.
 
 ### Phase 3: Install the Code
