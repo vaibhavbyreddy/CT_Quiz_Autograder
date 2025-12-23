@@ -22,7 +22,7 @@ It runs entirely within **Google Apps Script**, meaning there are no servers to 
    * *Save this somewhere safe; you will need it in Phase 3.*
 
 ### Phase 2: Prepare the Spreadsheet
-1. Open the **Google Sheet** that collects your form responses.
+1. Open the **Google Sheet** that collects your form responses. This can be found in the responses tab of the Google Form.
 2. Create a new tab (at the bottom) and rename it exactly: `Settings` (Case sensitive).
 3. In this new tab, fill in the following cells:
 
