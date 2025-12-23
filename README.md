@@ -41,7 +41,7 @@ https://docs.google.com/spreadsheets/d/186CQLKABzjRel4WW15-A3GFu0zVdn0sqPvq54Pda
 2. Click the **3 dots** (⋮) in the top right corner → Select **Script editor**.
    * *See Troubleshooting below if you get an Error 400 or a blank screen here.*
 3. Delete any existing code in the file.
-4. Copy and paste the code from [`Code.gs`](Code.gs) in this repository.
+4. Copy and paste the code from [`Autograder_Script.gs`](Autograder_Script.gs) in this repository.
 5. **Edit the Configuration Section** (Lines 1-15):
    * Paste your **API Key** into `GEMINI_API_KEY`.
    * Paste your **Sheet URL** into `SHEET_URL`.
