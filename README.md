@@ -28,6 +28,7 @@ It runs entirely within **Google Apps Script**, meaning there are no servers to 
 
 
 | `Model Answer` | *[Paste your Model Answer text here]* |
+
 | `Admin Email` | *[Paste your email address here to get copies of grades]* |
 
 4. **Copy the full URL** of this Google Sheet from your browser address bar.
