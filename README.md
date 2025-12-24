@@ -54,7 +54,8 @@ https://docs.google.com/spreadsheets/d/186CQLKABzjRel4WW15-A3GFu0zVdn0sqPvq54Pda
    * A "Review Permissions" popup will appear. Click it.
    * Select your Google account.
    * *If you see "Google hasn't verified this app":* Click **Advanced** → **Go to AutoGrader (unsafe)** → **Allow**.
-4. Check the **Execution Log** at the bottom. It should say `🎉 SUCCESS!`.
+   * Select all the permissions and proceed.
+4. When you get back to the script editor, check the **Execution Log** at the bottom. It should say `🎉 SUCCESS!`.
 
 ### Phase 5: Automation (The Trigger)
 1. On the left sidebar, click the **Alarm Clock icon** ("Triggers").
