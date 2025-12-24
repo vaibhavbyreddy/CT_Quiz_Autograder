@@ -15,13 +15,33 @@ const SHEET_URL = "PASTE_YOUR_FULL_SHEET_LINK_HERE";
 // 3. Do you want to email the student automatically? (true or false)
 const EMAIL_STUDENT = true;
 
+const GEMINI_MODEL = "gemini-3-flash-preview"; // Free tier friendly model (Will go out of Preview eventually, and break the code. If this happens, remove the "-preview")
+
+
+// This is the response that will be sent to the student. Feel free to edit the header and footer.
+function formatEmailBody(data) {
+  return `Hi there,\n\n` +
+         `Here is the result of your Trauma CT Interpretation.\n` +
+         `------------------------------------------------\n` +
+         `SCORE: ${data.total_score} / 24\n` +
+         `------------------------------------------------\n\n` +
+         `FEEDBACK SUMMARY:\n${data.feedback_summary}\n\n` +
+         `DETAILED FEEDBACK:\n` +
+         `A: ${data.section_breakdown.A}\n` +
+         `B: ${data.section_breakdown.B}\n` +
+         `C: ${data.section_breakdown.C}\n` +
+         `D: ${data.section_breakdown.D}\n` +
+         `E: ${data.section_breakdown.E}\n\n` +
+         `CT Trauma Evaluation Team`;
+}
+
 /**
  * ============================================================================
  * ⛔ DO NOT EDIT BELOW THIS LINE (UNLESS YOU ARE A DEVELOPER)
  * ============================================================================
  */
 
-const GEMINI_MODEL = "gemini-1.5-flash"; // Free tier friendly model
+
 
 /**
  * MAIN TRIGGER: Runs automatically when a student submits the form.
@@ -132,22 +152,6 @@ function getSettings(id) {
     modelAnswer: sheet.getRange("B2").getValue(),
     adminEmail: sheet.getRange("B3").getValue()
   };
-}
-
-function formatEmailBody(data) {
-  return `Hi there,\n\n` +
-         `Here is the result of your Trauma CT Interpretation.\n` +
-         `------------------------------------------------\n` +
-         `SCORE: ${data.total_score} / 24\n` +
-         `------------------------------------------------\n\n` +
-         `FEEDBACK SUMMARY:\n${data.feedback_summary}\n\n` +
-         `DETAILED FEEDBACK:\n` +
-         `A: ${data.section_breakdown.A}\n` +
-         `B: ${data.section_breakdown.B}\n` +
-         `C: ${data.section_breakdown.C}\n` +
-         `D: ${data.section_breakdown.D}\n` +
-         `E: ${data.section_breakdown.E}\n\n` +
-         `Automated Grading System`;
 }
 
 function callGeminiAPI(studentText, modelAnswer) {
